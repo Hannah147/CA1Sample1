@@ -7,7 +7,7 @@ using static System.Console;
 
 namespace CA1Sample1
 {
-    public class Player
+    public class Player : IComparable
     {
         // Question 2
         public int PlayerID { get; }
@@ -39,6 +39,13 @@ namespace CA1Sample1
         public override string ToString()
         {
             return $"{PlayerID}\t{PlayerName}\t{Score}";
+        }
+
+        public int CompareTo(object obj)
+        {
+            Player objectThatIAmComparingTo = obj as Player;
+            int returnValue = this.Score.CompareTo(objectThatIAmComparingTo.Score);
+            return returnValue;
         }
 
 
