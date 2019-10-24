@@ -26,19 +26,26 @@ namespace CA1Sample1
             allPlayers.Add(player4);
             allPlayers.Add(player5);
 
-            player1.IncreaseScore(1);
-            player2.IncreaseScore(10);
+            //player1.IncreaseScore(1);
+            // player2.IncreaseScore(10);
 
             Display(allPlayers);
 
             // Question 9
+            GetScores(allPlayers);
+
+        }
+
+        // Question 9
+        private static void GetScores(List<Player> allPlayers)
+        {
             Write("\nPlease enter number of player you wish to add score for >> ");
             string response = ReadLine();
             int playerNumber = int.Parse(response);
 
-            while(playerNumber != 0)
+            while (playerNumber != 0)
             {
-                Player selectedPlayer = allPlayers.ElementAt(playerNumber-1);
+                Player selectedPlayer = allPlayers.ElementAt(playerNumber - 1); // Use -1 as index starts at 0
 
                 selectedPlayer.IncreaseScore(1);
 
@@ -49,7 +56,6 @@ namespace CA1Sample1
                 playerNumber = int.Parse(response);
 
             }// end of while loop
-
         }
 
         // Question 8
@@ -61,7 +67,8 @@ namespace CA1Sample1
             {
                 Write("{0, -15}", player.Score);
             }
-            
+
         }
+       
     }
 }
