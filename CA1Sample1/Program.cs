@@ -34,6 +34,9 @@ namespace CA1Sample1
             // Question 9
             GetScores(allPlayers);
 
+            // Question 11
+            DisplayPlayerDetails(allPlayers);
+
         }
 
         // Question 9
@@ -68,6 +71,16 @@ namespace CA1Sample1
                 Write("{0, -15}", player.Score);
             }
 
+        }
+
+        // Question 11
+        private static void DisplayPlayerDetails(List<Player> players)
+        {
+            WriteLine($"{"ID"}\t{"Name"}\t{"Score"}");
+            foreach (Player player in players)
+            {
+                WriteLine(player);
+            }
         }
        
     }

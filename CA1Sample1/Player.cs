@@ -35,6 +35,12 @@ namespace CA1Sample1
                 HighScore = Score;
         }
 
+        // Question 11
+        public override string ToString()
+        {
+            return $"{PlayerID}\t{PlayerName}\t{Score}";
+        }
+
 
     }
 }
