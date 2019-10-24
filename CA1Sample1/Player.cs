@@ -14,6 +14,8 @@ namespace CA1Sample1
         public string PlayerName { get; set; }
         public int Score { get; private set; }
 
+        public static int HighScore { get; private set; }
+
         // Question 3 + 4
         public Player(int playerID, string playerName, int score)
         {
@@ -27,6 +29,12 @@ namespace CA1Sample1
         {
             if (Score < 100)
             Score += addScore;
+
+            // Question 10
+            if (Score > HighScore)
+                HighScore = Score;
         }
+
+
     }
 }
