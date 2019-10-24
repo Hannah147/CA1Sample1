@@ -25,6 +25,23 @@ namespace CA1Sample1
             allPlayers.Add(player3);
             allPlayers.Add(player4);
             allPlayers.Add(player5);
+
+            player1.IncreaseScore(1);
+            player2.IncreaseScore(10);
+
+            Display(allPlayers);
+
+        }
+
+        private static void Display(List<Player> players)
+        {
+            WriteLine("{0, -10}{1, -10}{2, -10}{3, -10}{4, -10}", "Player 1", "Player 2", "Player 3", "Player 4", "Player 5");
+
+            foreach ( Player player in players)
+            {
+                Write("{0, -10}", player.Score);
+            }
+            
         }
     }
 }
