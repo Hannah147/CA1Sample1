@@ -22,6 +22,11 @@ namespace CA1Sample1
             Score = score;
         }
 
-
+        // Question 7
+        public void IncreaseScore(int addScore)
+        {
+            if (Score < 100)
+            Score += addScore;
+        }
     }
 }
