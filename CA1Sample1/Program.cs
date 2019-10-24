@@ -31,15 +31,35 @@ namespace CA1Sample1
 
             Display(allPlayers);
 
+            // Question 9
+            Write("\nPlease enter number of player you wish to add score for >> ");
+            string response = ReadLine();
+            int playerNumber = int.Parse(response);
+
+            while(playerNumber != 0)
+            {
+                Player selectedPlayer = allPlayers.ElementAt(playerNumber-1);
+
+                selectedPlayer.IncreaseScore(1);
+
+                Display(allPlayers);
+
+                Write("\nPlease enter number of player you wish to add score for >> ");
+                response = ReadLine();
+                playerNumber = int.Parse(response);
+
+            }// end of while loop
+
         }
 
+        // Question 8
         private static void Display(List<Player> players)
         {
-            WriteLine("{0, -10}{1, -10}{2, -10}{3, -10}{4, -10}", "Player 1", "Player 2", "Player 3", "Player 4", "Player 5");
+            WriteLine("{0, -15}{1, -15}{2, -15}{3, -15}{4, -15}", "Player 1", "Player 2", "Player 3", "Player 4", "Player 5");
 
             foreach ( Player player in players)
             {
-                Write("{0, -10}", player.Score);
+                Write("{0, -15}", player.Score);
             }
             
         }
