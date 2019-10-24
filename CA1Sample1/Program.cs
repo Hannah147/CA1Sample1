@@ -34,8 +34,22 @@ namespace CA1Sample1
             // Question 9
             GetScores(allPlayers);
 
+
             // Question 11
+            WriteLine("\n***** Players Displayed with no order *****");
             DisplayPlayerDetails(allPlayers);
+
+            // Question 13
+            WriteLine("\n***** Players Displayed Sorted by Score *****");
+            allPlayers.Sort();
+            DisplayPlayerDetails(allPlayers);
+
+            WriteLine("\n***** Players Displayed Sorted by Score Reversed *****");
+            allPlayers.Reverse();
+            DisplayPlayerDetails(allPlayers);
+
+            // Question 14
+            WriteLine($"The Highest score is {Player.HighScore}");
 
         }
 
@@ -76,7 +90,7 @@ namespace CA1Sample1
         // Question 11
         private static void DisplayPlayerDetails(List<Player> players)
         {
-            WriteLine($"{"ID"}\t{"Name"}\t{"Score"}");
+            WriteLine($"\n{"ID"}\t{"Name"}\t{"Score"}");
             foreach (Player player in players)
             {
                 WriteLine(player);

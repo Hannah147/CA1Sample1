@@ -41,6 +41,7 @@ namespace CA1Sample1
             return $"{PlayerID}\t{PlayerName}\t{Score}";
         }
 
+        // Question 12
         public int CompareTo(object obj)
         {
             Player objectThatIAmComparingTo = obj as Player;
