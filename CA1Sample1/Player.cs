@@ -14,7 +14,7 @@ namespace CA1Sample1
         private string PlayerName { get; set; }
         private int Score { get; set; }
 
-        // Question 3
+        // Question 3 + 4
         public Player(int playerID, string playerName, int score)
         {
             PlayerID = playerID;
