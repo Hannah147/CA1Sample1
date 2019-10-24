@@ -7,7 +7,7 @@ using static System.Console;
 
 namespace CA1Sample1
 {
-    class Player
+    public class Player
     {
         // Question 2
         private int PlayerID { get; }
