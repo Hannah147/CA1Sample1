@@ -10,8 +10,16 @@ namespace CA1Sample1
     class Player
     {
         // Question 2
-        private int PlayerID { get; set; }
+        private int PlayerID { get; }
         private string PlayerName { get; set; }
         private int Score { get; set; }
+
+        // Question 3
+        public Player(int playerID, string playerName, int score)
+        {
+            PlayerID = playerID;
+            PlayerName = playerName;
+            Score = score;
+        }
     }
 }
